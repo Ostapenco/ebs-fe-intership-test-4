@@ -1,0 +1,13 @@
+.logoContainer {
+  background: 4d3c59;
+  height: 8rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.logoContainer .logo {
+  display: block;
+  width: 5.5rem;
+  margin-left: 3rem;
+}

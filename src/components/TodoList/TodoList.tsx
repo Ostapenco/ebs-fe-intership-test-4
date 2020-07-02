@@ -5,12 +5,15 @@ import './TodoList.css';
 import TodoElement from '../TodoElement/TodoElement';
 
 const todoList: TodoList = [
-  { name: 'Create Todo project', complete: false },
-  { name: 'Run 5km, please', complete: true },
-  { name: 'Smile and go on', complete: false },
-  { name: 'Drink water - 2 liters', complete: false },
-  { name: 'Eat something', complete: true },
-  { name: 'Read a book', complete: false },
+  { id: '1', name: 'Create Todo project', complete: false },
+  { id: '2', name: 'Run 5km, please', complete: true },
+  { id: '3', name: 'Smile and go on', complete: false },
+  { id: '4', name: 'Drink water - 2 liters', complete: false },
+  { id: '5', name: 'Eat something', complete: true },
+  { id: '6', name: 'Read a book', complete: false },
+  { id: '7', name: 'Drink water - 2 liters', complete: false },
+  { id: '8', name: 'Eat something', complete: true },
+  { id: '9', name: 'Read a book', complete: false },
 ];
 
 const TodoList: React.FC = () => {
@@ -34,7 +37,8 @@ const TodoList: React.FC = () => {
         return;
       })
       .catch((err) => {
-        return console.error(err), 'Oops! Something went wrong';
+        'Oops! Something went wrong';
+        return console.error(err);
       });
   }, []);
 
@@ -47,9 +51,9 @@ const TodoList: React.FC = () => {
   }, [todoListDB]);
 
   return (
-    <div className='outerContainer'>
+    <div className='todoListContainer'>
       {todoListDB.map((todo: Todo) => (
-        <TodoElement key={todo.name} todo={todo} />
+        <TodoElement key={todo.id} todo={todo} />
       ))}
     </div>
   );

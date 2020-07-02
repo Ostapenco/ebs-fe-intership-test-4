@@ -1,0 +1,70 @@
+.layoutContainer {
+  min-width: fit-content;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.contentContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContainer {
+  padding-left: 9.7rem;
+  flex: 1;
+}
+
+.sideLine {
+  background: #4d3c59;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  width: 28px;
+  display: inline-block;
+}
+
+.sideContainer {
+  min-width: fit-content;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.scroller {
+  right: -100%;
+  top: -2rem;
+}
+
+.scrollBtn {
+  color: white;
+  cursor: pointer;
+  height: 3.2rem;
+  opacity: 1;
+  position: absolute;
+  top: 2.45rem;
+  transform: translate(-50%);
+  width: 3.2rem;
+  background: #823a5f;
+  border-width: 0;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 50%;
+  outline: 0;
+  padding: 0;
+  box-shadow: 0 1px 4px 0 black;
+}
+.arrowLeft,
+.arrowRight {
+  width: 10px;
+  /* position: absolute; */
+  top: 0;
+  right: 40%;
+}
+
+.arrowRight {
+  transform: rotate(180deg);
+}
