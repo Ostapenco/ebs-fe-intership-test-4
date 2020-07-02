@@ -6,10 +6,11 @@ import TodoElement from '../TodoElement/TodoElement';
 
 const todoList: TodoList = [
   { name: 'Create Todo project', complete: false },
-  { name: 'Run 5km', complete: true },
+  { name: 'Run 5km, please', complete: true },
   { name: 'Smile and go on', complete: false },
-  { name: 'Drink water', complete: false },
+  { name: 'Drink water - 2 liters', complete: false },
   { name: 'Eat something', complete: true },
+  { name: 'Read a book', complete: false },
 ];
 
 const TodoList: React.FC = () => {
@@ -46,7 +47,7 @@ const TodoList: React.FC = () => {
   }, [todoListDB]);
 
   return (
-    <div>
+    <div className='outerContainer'>
       {todoListDB.map((todo: Todo) => (
         <TodoElement key={todo.name} todo={todo} />
       ))}
