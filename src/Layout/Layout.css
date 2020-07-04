@@ -14,7 +14,8 @@
 }
 
 .mainContainer {
-  padding-left: 9.7rem;
+  width: 84vw;
+  padding-left: 6rem;
   flex: 1;
 }
 

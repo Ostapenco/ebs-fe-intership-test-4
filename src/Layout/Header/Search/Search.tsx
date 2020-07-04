@@ -2,7 +2,11 @@ import React from 'react';
 
 import './Search.css';
 
-const Search: React.FC = () => {
+interface SearchProps {
+  openModal: () => void;
+}
+
+const Search: React.FC<SearchProps> = ({ openModal }) => {
   //   const [inputValue, setInputValue] = useState('');
 
   return (
@@ -19,7 +23,9 @@ const Search: React.FC = () => {
         />
       </div>
       <div className='addContainer'>
-        <button>Add todo</button>
+        <button className='addButton' type='button' onClick={openModal}>
+          Add todo
+        </button>
       </div>
     </>
   );

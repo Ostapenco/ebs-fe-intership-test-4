@@ -3,10 +3,14 @@ import React from 'react';
 import './Header.css';
 import Search from './Search/Search';
 
-const Header: React.FC = () => (
+interface HeaderProps {
+  openModal: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ openModal }) => (
   <header className='theHeader'>
     <nav className='nav'>
-      <Search />
+      <Search openModal={openModal} />
     </nav>
   </header>
 );

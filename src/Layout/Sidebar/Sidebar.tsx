@@ -15,9 +15,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen }) => {
       </div>
       <nav className='sidebarNav'>
         <ul className='list'>
-          <li>Category 1</li>
-          <li>Category 2</li>
-          <li>Category 3</li>
+          <li>
+            <span className='topDot'></span>Top Priority
+          </li>
+          <li>
+            <span className='medDot'></span>Medium Priority
+          </li>
+          <li>
+            <span className='lowDot'></span>Low Priority
+          </li>
         </ul>
       </nav>
     </aside>

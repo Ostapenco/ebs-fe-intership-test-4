@@ -5,7 +5,11 @@ import Header from './Header/Header';
 import Sidebar from './Sidebar/Sidebar';
 import Vector from './Vector.svg';
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+  openModal: () => void;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, openModal }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
@@ -28,8 +32,9 @@ const Layout: React.FC = ({ children }) => {
         </div>
       </div>
       <div className='contentContainer'>
-        <Header />
+        <Header openModal={openModal} />
         <main className='mainContainer'>{children}</main>
+        <footer style={{ height: '5rem' }}></footer>
       </div>
     </div>
   );
