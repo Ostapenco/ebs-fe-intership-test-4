@@ -1,0 +1,121 @@
+.searchContainer {
+  width: 28.8rem;
+  height: 3.2rem;
+  position: relative;
+}
+.cancelBtn {
+  position: absolute;
+  right: 1.2rem;
+  width: 1.2rem;
+  height: 1.3rem;
+  top: 30%;
+  background-color: transparent;
+  border: none;
+  opacity: 0.7;
+}
+
+/* .iconSearchCancel {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 0.8rem;
+  z-index: 11;
+  fill: black;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  fill: 1px solid black;
+  margin-left: 1.2rem;
+  left: 0;
+  opacity: 0.7;
+} */
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: #f2f2f2;
+  font-size: 1.2rem;
+  padding: 0 1.8rem 0.2rem 3.2rem;
+  transition: 0.2s all;
+  outline: none;
+  color: #4d3c59;
+  font-weight: 700;
+}
+
+.searchInput::-webkit-input-placeholder {
+  color: #a57a8f;
+  font-weight: 700;
+}
+
+.searchInput::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.addContainer {
+  height: 3.2rem;
+}
+.addButton {
+  height: 100%;
+  border: 4px solid #af6eeb;
+  border-radius: 35px;
+  background: linear-gradient(45deg, #fff 50%, #af6eeb 50%);
+  font-size: 1.2rem;
+  padding: 0 1.8rem 0.2rem;
+  /* transition: 0.2s all;
+  outline: none; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* want to animate button, will try again later
+.addContainer button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  transform: rotate(45deg);
+  background-color: #fff;
+  opacity: 0.2;
+  transition: 0.4s ease;
+}
+
+.addContainer button:hover:before {
+  left: 100%;
+} */
+
+.addButton:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(45deg, #af6eeb 50%, transparent 50%);
+  z-index: -1;
+  border-radius: 35px;
+}
+
+.addButton,
+.addButton:after {
+  background-size: 300%;
+  background-position: 100%;
+  transition: 1s, font-size 0.2s;
+}
+
+.addButton:hover,
+.addButton:hover:after {
+  background-position: 0;
+  /* font-size: 1.1em; */
+  color: #af6eeb;
+}

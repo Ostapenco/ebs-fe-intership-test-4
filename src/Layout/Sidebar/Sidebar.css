@@ -1,0 +1,68 @@
+.sidebarOpened {
+  min-width: 16rem;
+  min-height: 100%;
+  background: #4d3c59;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  /* -webkit-transform: translate3d(100%, 0px, 0px);
+  transform: translate3d(100%, 0px, 0px);
+  visibility: visible;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s; */
+}
+.sidebarNav {
+  background: #4d3c59;
+  color: #fff;
+}
+.sidebarNav ul {
+  margin: 3rem 0;
+}
+
+.sidebarNav ul li {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 0 0.8rem 2rem;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.sidebarNav ul li:hover {
+  background: #f2f2f2;
+  color: #4d3c59;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sidebarClosed {
+  width: 0px;
+  position: fixed;
+  /* -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  visibility: visible; */
+}
+
+.sidebarClosed .sidebarNav,
+.sidebarClosed .logo {
+  display: none;
+}
+
+.topDot,
+.medDot,
+.lowDot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  box-shadow: 0 0 5px 0;
+}
+
+.topDot {
+  background: #85144b;
+}
+.medDot {
+  background: #a661d6;
+}
+.lowDot {
+  background: #ddabc3;
+}

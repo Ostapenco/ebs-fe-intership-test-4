@@ -13,19 +13,15 @@
   outline: none;
 }
 
-.App {
-  margin: 20px;
-}
-
 li {
   list-style-type: none;
 }
 
-label input {
+/* label input {
   margin: 7px;
-}
+} */
 
-button {
+/* button {
   height: 40px;
   width: 100px;
-}
+} */

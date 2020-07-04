@@ -1,56 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import localForage from 'localforage';
+import React from 'react';
 
 import './TodoList.css';
 import TodoElement from '../TodoElement/TodoElement';
+import Modal from '../Modal/Modal';
 
-const todoList: TodoList = [
-  { name: 'Create Todo project', complete: false },
-  { name: 'Run 5km, please', complete: true },
-  { name: 'Smile and go on', complete: false },
-  { name: 'Drink water - 2 liters', complete: false },
-  { name: 'Eat something', complete: true },
-  { name: 'Read a book', complete: false },
-];
+interface TodoListProps {
+  todoListDB: TodoList;
+  modalVisible: boolean;
+  closeModal: () => void;
+}
 
-const TodoList: React.FC = () => {
-  const [todoListDB, setTodoListDB] = useState<TodoList>([]);
-
-  useEffect(() => {
-    localForage
-      .getItem<TodoList>('todoList')
-      .then(function (value: TodoList | null) {
-        if (!value) {
-          localForage
-            .setItem<TodoList>('todoList', todoList)
-            .then(function (data: TodoList) {
-              setTodoListDB(data);
-            })
-            .catch((err) => console.error(err));
-
-          return;
-        }
-        setTodoListDB(value);
-        return;
-      })
-      .catch((err) => {
-        return console.error(err), 'Oops! Something went wrong';
-      });
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      if (todoListDB.length) {
-        localForage.setItem<TodoList>('todoList', todoListDB);
-      }
-    };
-  }, [todoListDB]);
-
+const TodoList: React.FC<TodoListProps> = ({
+  todoListDB,
+  modalVisible,
+  closeModal,
+}) => {
   return (
-    <div className='outerContainer'>
-      {todoListDB.map((todo: Todo) => (
-        <TodoElement key={todo.name} todo={todo} />
-      ))}
+    <div className='todoListContainer'>
+      {modalVisible ? (
+        <>
+          <Modal closeModal={closeModal} />
+          {todoListDB.map((todo: Todo) => (
+            <TodoElement key={todo.id} todo={todo} />
+          ))}
+        </>
+      ) : (
+        <>
+          {todoListDB.map((todo: Todo) => (
+            <TodoElement key={todo.id} todo={todo} />
+          ))}
+        </>
+      )}
     </div>
   );
 };
