@@ -1,11 +1,6 @@
 import React, { useState, createContext, useEffect } from 'react';
 import localForage from 'localforage';
 
-// type ContextProps = {
-//   todoListDB: TodoList;
-//   setTodoListDB: (todoList: TodoList) => void;
-// };
-
 type Props = {
   children: React.ReactNode;
 };
@@ -89,7 +84,6 @@ export const TodoProvider = ({ children }: Props) => {
     priority: 1,
     complete: false,
   });
-  console.log('TodoProvider -> newTodo', newTodo);
   const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
@@ -148,9 +142,3 @@ export const TodoProvider = ({ children }: Props) => {
     </TodoContext.Provider>
   );
 };
-
-//useMemo
-
-//creat another context.. for 1 that changes often and another one //// with useMemo?
-
-//throw error if context is null???

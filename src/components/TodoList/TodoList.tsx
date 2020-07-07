@@ -5,13 +5,6 @@ import TodoElement from '../TodoElement/TodoElement';
 import Modal from '../Modal/Modal';
 import { TodoContext, RestTodoContext } from '../../context/TodoContext';
 
-interface TodoListProps {
-  // todoListDB: TodoList;
-  // setTodoListDB: (todoList: TodoList) => void;
-  // modalVisible: boolean;
-  // closeModal: () => void;
-}
-
 const TodoList: React.FC = () => {
   const ctx = useContext(TodoContext);
   const restCtx = useContext(RestTodoContext);
