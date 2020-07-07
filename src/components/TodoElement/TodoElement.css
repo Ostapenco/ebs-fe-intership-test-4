@@ -28,6 +28,7 @@
 }
 .todoContainer label {
   height: 3rem;
+  cursor: pointer;
 }
 .todoContainer span {
   font-size: 1.1rem;

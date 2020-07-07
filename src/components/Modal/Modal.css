@@ -5,7 +5,7 @@
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #c18ba5;
+  background: #59436a;
   border-radius: 20px;
 }
 
@@ -40,10 +40,35 @@
   font-weight: 600;
 }
 
+.modalForm select {
+  width: 20rem;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: #ebe3d8;
+  line-height: 2.22rem;
+  margin: 1.5rem 1.5rem 1rem 1.5rem;
+  padding: 0.7rem 1.5rem;
+  color: #4d3c59;
+  font-size: 1.2rem;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  font-weight: 600;
+}
+.modalForm select option {
+  font-weight: 600;
+  color: #4d3c59;
+}
+
+.modalForm select option:first-child {
+  color: #786d80;
+}
+
 .modalButton {
   border: 1px solid #ebe3d8;
   border-radius: 20px;
-  background: #85144b;
+  background: #af6eeb;
   color: #fff;
   width: 24rem;
   padding: 1.2rem;

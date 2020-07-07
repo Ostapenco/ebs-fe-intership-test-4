@@ -6,10 +6,13 @@ import Sidebar from './Sidebar/Sidebar';
 import Vector from './Vector.svg';
 
 interface LayoutProps {
-  openModal: () => void;
+  // openModal: () => void;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, openModal }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  // , openModal
+}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
@@ -32,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children, openModal }) => {
         </div>
       </div>
       <div className='contentContainer'>
-        <Header openModal={openModal} />
+        <Header />
         <main className='mainContainer'>{children}</main>
         <footer style={{ height: '5rem' }}></footer>
       </div>
