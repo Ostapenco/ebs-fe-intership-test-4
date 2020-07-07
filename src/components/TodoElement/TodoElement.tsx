@@ -13,10 +13,10 @@ const TodoElement: React.FC<TodoElementProps> = ({ todo }) => {
       background = '#85144b';
       break;
     case 2:
-      background = '#a661d6';
+      background = '#2d7e2d';
       break;
     case 3:
-      background = '#ddabc3';
+      background = '#b1a82a';
       break;
   }
 
