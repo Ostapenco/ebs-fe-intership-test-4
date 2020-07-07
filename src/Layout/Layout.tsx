@@ -5,14 +5,7 @@ import Header from './Header/Header';
 import Sidebar from './Sidebar/Sidebar';
 import Vector from './Vector.svg';
 
-interface LayoutProps {
-  // openModal: () => void;
-}
-
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  // , openModal
-}) => {
+const Layout: React.FC = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (

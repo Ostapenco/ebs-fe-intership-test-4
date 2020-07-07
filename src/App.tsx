@@ -6,8 +6,6 @@ import './App.css';
 import { TodoProvider } from './context/TodoContext';
 
 const App: React.FC = () => {
-  // const [initialTodoList, setInitialTodoList] = useState<TodoList>([]);
-
   return (
     <TodoProvider>
       <div className='App'>
